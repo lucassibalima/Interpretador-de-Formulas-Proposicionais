@@ -9,8 +9,11 @@ O programa recebe uma expressão lógica composta por proposições e operadores
 ## 👨‍💻 Autor
 
 Lucas Siba de Lima
+
 Leo Mezzadri
+
 Edilberto Garipuna
+
 
 Curso de Ciência da Computação
 
