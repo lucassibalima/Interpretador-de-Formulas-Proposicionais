@@ -1,8 +1,8 @@
 # 🧠 Interpretador de Fórmulas Proposicionais
 
-Projeto desenvolvido em Python para interpretar e avaliar fórmulas da Lógica Proposicional.
+Um interpretador de lógica proposicional desenvolvido em Python capaz de analisar, avaliar e gerar tabelas-verdade para fórmulas compostas.
 
-O programa recebe uma expressão lógica composta por proposições e operadores lógicos, solicita os valores de verdade das variáveis e retorna o resultado final da fórmula.
+O projeto foi desenvolvido com o objetivo de aplicar conceitos de Lógica Matemática e Estruturas de Dados, implementando um interpretador próprio sem o uso de calculadoras proposicionais externas.
 
 ---
 
@@ -14,19 +14,30 @@ Leo Mezzadri
 
 Edilberto Garipuna
 
-
-Curso de Ciência da Computação
+🎓 Ciência da Computação – PUCPR
 
 ---
 
-## 📋 Funcionalidades
+## 📖 Sobre o Projeto
 
-* Identificação automática das variáveis da expressão
-* Conversão da expressão para notação pós-fixa
-* Avaliação de fórmulas proposicionais
-* Suporte a múltiplos operadores lógicos
-* Implementação utilizando pilhas e manipulação de listas
-* Interface simples via terminal
+A lógica proposicional é uma área fundamental da matemática e da computação utilizada para representar e analisar proposições através de operadores lógicos.
+
+Este interpretador permite que o usuário insira uma fórmula lógica, atribua valores de verdade às proposições e obtenha automaticamente o resultado da expressão.
+
+Além disso, o sistema é capaz de gerar tabelas-verdade completas para qualquer quantidade de variáveis presentes na fórmula.
+
+---
+
+## ✨ Funcionalidades
+
+* ✅ Avaliação de fórmulas proposicionais
+* ✅ Geração automática de tabela-verdade
+* ✅ Identificação automática das variáveis
+* ✅ Validação de parênteses
+* ✅ Conversão de expressões para notação pós-fixa
+* ✅ Avaliação utilizando pilha
+* ✅ Interface simples via terminal
+* ✅ Implementação sem bibliotecas externas
 
 ---
 
@@ -42,33 +53,7 @@ Curso de Ciência da Computação
 
 ---
 
-
-## 💻 Exemplo de Uso
-
-### Entrada
-
-```text
-(P ^ Q) -> R
-```
-
-### Valores Informados
-
-```text
-P = V
-Q = F
-R = V
-```
-
-### Saída
-
-```text
-Resultado Final:
-VERDADEIRO
-```
-
----
-
-## 🧩 Exemplos de Fórmulas
+## 💻 Exemplos de Fórmulas
 
 ```text
 P ^ Q
@@ -81,32 +66,143 @@ P ^ Q
 
 (P <-> Q)
 
-((P ^ Q) -> (~R v S))
+((P ^ Q) -> R)
 
 ((P -> Q) ^ (Q -> R))
+
+((P ^ Q) -> (~R v S))
 ```
 
 ---
 
+## 🖥️ Menu Principal
 
-## 🛠️ Conceitos Utilizados
+Ao executar o programa, o usuário pode escolher entre:
 
-* Lógica Proposicional
+```text
+1 - Avaliar fórmula
+2 - Gerar tabela-verdade
+3 - Sair
+```
+
+---
+
+## 📊 Exemplo de Avaliação
+
+### Fórmula
+
+```text
+(P ^ Q) -> R
+```
+
+### Valores
+
+```text
+P = V
+Q = F
+R = V
+```
+
+### Resultado
+
+```text
+VERDADEIRO
+```
+
+---
+
+## 📋 Exemplo de Tabela-Verdade
+
+### Fórmula
+
+```text
+P -> Q
+```
+
+### Saída
+
+| P | Q | Resultado |
+| - | - | --------- |
+| V | V | V         |
+| V | F | F         |
+| F | V | V         |
+| F | F | V         |
+
+---
+
+## ⚙️ Funcionamento Interno
+
+O programa realiza o processamento da fórmula em três etapas principais:
+
+### 1. Tokenização
+
+A expressão é dividida em componentes menores chamados tokens.
+
+Exemplo:
+
+```text
+(P ^ Q) -> R
+```
+
+Tokens gerados:
+
+```python
+['(', 'P', '^', 'Q', ')', '->', 'R']
+```
+
+---
+
+### 2. Conversão para Notação Pós-Fixa
+
+A expressão é convertida para uma forma mais simples de ser avaliada utilizando pilhas.
+
+Expressão original:
+
+```text
+(P ^ Q) -> R
+```
+
+Resultado:
+
+```text
+P Q ^ R ->
+```
+
+---
+
+### 3. Avaliação da Expressão
+
+A expressão pós-fixa é processada utilizando uma pilha até que reste apenas um valor lógico, correspondente ao resultado final da fórmula.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+* Python 3
+* Programação Orientada a Objetos (POO)
 * Estruturas de Dados
 * Pilhas (Stack)
 * Manipulação de Strings
-* Conversão Infixa → Pós-fixa
+
+---
+
+## 📚 Conceitos Aplicados
+
+* Lógica Proposicional
+* Tabela-Verdade
+* Negação
+* Conjunção
+* Disjunção
+* Implicação
+* Bicondicional
+* Tokenização
+* Parsing de Expressões
+* Notação Pós-Fixa
 * Avaliação de Expressões
-* Programação Orientada a Objetos
 
 ---
 
-## 📚 Sobre o Projeto
 
-Este projeto foi desenvolvido com o objetivo de aplicar conceitos de lógica matemática e programação, implementando um interpretador capaz de processar e avaliar fórmulas proposicionais de forma automática.
 
-A solução utiliza o algoritmo de conversão para notação pós-fixa e uma pilha para avaliar as expressões de maneira eficiente.
-
----
 
 
