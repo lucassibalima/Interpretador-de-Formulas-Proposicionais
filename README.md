@@ -42,27 +42,6 @@ Curso de Ciência da Computação
 
 ---
 
-## 🚀 Como Executar
-
-### 1. Clone o repositório
-
-```bash
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
-```
-
-### 2. Acesse a pasta do projeto
-
-```bash
-cd nome-do-repositorio
-```
-
-### 3. Execute o programa
-
-```bash
-python interpretador_logico.py
-```
-
----
 
 ## 💻 Exemplo de Uso
 
@@ -109,14 +88,6 @@ P ^ Q
 
 ---
 
-## ⚙️ Estrutura do Projeto
-
-```text
-interpretador_logico.py
-README.md
-```
-
----
 
 ## 🛠️ Conceitos Utilizados
 
